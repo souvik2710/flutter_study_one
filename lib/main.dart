@@ -1,9 +1,15 @@
+import 'package:demo_project/routes.dart';
+import 'package:demo_project/user_interface_design1.dart';
+import 'package:demo_project/user_interface_design2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'ImageWithtext.dart';
+import 'array_example.dart';
 import 'calculator.dart';
 import 'calwithseperatevalue.dart';
 
+import 'casecading_operators.dart';
 import 'checkbox_one_selection.dart';
 import 'checkbox_one_selection_common_widget.dart';
 import 'expanded_example.dart';
@@ -11,7 +17,9 @@ import 'fullcalculator.dart';
 import 'dartrelated.dart';
 import 'listExample.dart';
 import 'mainaxis_crosaxis_example.dart';
+import 'mapping_example.dart';
 import 'mcq_using_radio_button.dart';
+import 'navigation_main.dart';
 import 'notes.dart';
 import 'notes_using_common_widget.dart';
 
@@ -53,8 +61,32 @@ class _MyAppState extends State<MyApp> {
     //return MaterialApp(home: CreateNotes());
    // return MaterialApp(home: CreateCheckBox());
     //return MaterialApp(home:  AxisExample());
-    return MaterialApp(home:  FrontView());
+   // return MaterialApp(home:  FrontView());
+    //return MaterialApp(home:  MappingExample());
+    //return MaterialApp(home:  ArrayExample());
+    //return MaterialApp(home:  CasecadingOp());
+    //return MaterialApp(home:  DesignPage());
+    return MaterialApp(
+      showSemanticsDebugger: false,
+        theme: ThemeData(
+              fontFamily: "Poppins",
+            appBarTheme: AppBarTheme(
+              systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: Colors.orange,
+               // statusBarIconBrightness: Brightness.dark,
+                //statusBarBrightness: Brightness.light,
+              ),
+
+                //color:Colors.orange
+        ),
+
+             ),
+        onGenerateRoute: (settings) => AppRouter.onGenerateRoute(settings),
+        home:
+        PageMain()
+        //SecondPage()
+    );
   }
+
 }
 class HomePage extends StatefulWidget {
   @override
