@@ -122,16 +122,13 @@ class _DesignPageState extends State<DesignPage> {
         Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              width: 100.0,
-              height: 200.0,
               decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image:NetworkImage("https://image.shutterstock.com/image-photo/beach-oceanfront-260nw-422059351.jpg"),
+                    fit: BoxFit.fill,
+                  ),
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                color: Colors.redAccent,
-              ),
-              child: Image.network(
-                "https://cdn.pixabay.com/photo/2020/06/21/09/48/hill-5324149__340.jpg",
-                height: 200.0,
-                width: 100.0,
+
               ),
             ),
             Container(

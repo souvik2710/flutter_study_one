@@ -1,4 +1,4 @@
-import 'package:demo_project/routes.dart';
+import 'package:demo_project/route%20and%20navigation/routes.dart';
 import 'package:demo_project/user_interface_design1.dart';
 import 'package:demo_project/user_interface_design2.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 
 import 'ImageWithtext.dart';
 import 'array_example.dart';
+import 'bottom_navigation_bar.dart';
 import 'calculator.dart';
 import 'calwithseperatevalue.dart';
 
@@ -19,7 +20,7 @@ import 'listExample.dart';
 import 'mainaxis_crosaxis_example.dart';
 import 'mapping_example.dart';
 import 'mcq_using_radio_button.dart';
-import 'navigation_main.dart';
+import 'route and navigation/navigation_main.dart';
 import 'notes.dart';
 import 'notes_using_common_widget.dart';
 
@@ -36,12 +37,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-   // return MaterialApp(home: HomePage());
-   // return MaterialApp(home: Calculator());
-    //return MaterialApp(home: Fullcalculator());
-    //return MaterialApp(home: DartDemo());
-   // return MaterialApp(home: ListExample());
-    //return MaterialApp(home: SeperateValuecalculator());
     // return MaterialApp
     //   (
     //     theme: ThemeData(
@@ -54,18 +49,12 @@ class _MyAppState extends State<MyApp> {
     //     theme: ThemeData(
     //       fontFamily: "Roboto"
     //     ),
-    //     home: SideScene());
+    //     home:
+    //     SideScene()
+    //ArrayExample()
+    //CasecadingOp()
+    //     );
 
-   // return MaterialApp(home: McqPattern());
-    //return MaterialApp(home: OnceSelection());
-    //return MaterialApp(home: CreateNotes());
-   // return MaterialApp(home: CreateCheckBox());
-    //return MaterialApp(home:  AxisExample());
-   // return MaterialApp(home:  FrontView());
-    //return MaterialApp(home:  MappingExample());
-    //return MaterialApp(home:  ArrayExample());
-    //return MaterialApp(home:  CasecadingOp());
-    //return MaterialApp(home:  DesignPage());
     return MaterialApp(
       showSemanticsDebugger: false,
         theme: ThemeData(
@@ -82,8 +71,23 @@ class _MyAppState extends State<MyApp> {
              ),
         onGenerateRoute: (settings) => AppRouter.onGenerateRoute(settings),
         home:
-        PageMain()
+       // PageMain()
+        //Calculator()
+        //Fullcalculator()
+        //HomePage()
         //SecondPage()
+       //DartDemo()
+      //ListExample()
+      // CreateNotes()
+     // DesignPage()
+      //CreateCheckBox()
+      //SeperateValuecalculator()
+      //McqPattern()
+      // FrontView()
+      //OnceSelection()
+      //AxisExample()
+      //MappingExample()
+        BottomNav()
     );
   }
 
