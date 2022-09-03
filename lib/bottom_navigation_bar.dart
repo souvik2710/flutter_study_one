@@ -1,5 +1,7 @@
 import 'package:demo_project/route%20and%20navigation/routes.dart';
 import 'package:flutter/material.dart';
+
+import 'custom_drawer.dart';
 class BottomNav extends StatefulWidget {
 
   @override
@@ -14,20 +16,20 @@ class _BottomNavState extends State<BottomNav> {
     return Scaffold(
 
       appBar: AppBar(title: Text("Bottom Nav Bar"),
-      backgroundColor: Colors.lightGreenAccent[100],
+      backgroundColor: Colors.lightGreenAccent[700],
       centerTitle: true,),
       body:listBottomNavBar[ourSelectedIndex],
 
       drawer: Drawer(
         child: ListView(
           children: [
-           // DrawerHeader(child: Text("Main Menu")),
-           //  UserAccountsDrawerHeader(
-           //      accountName: Text("Ankita"),
-           //      accountEmail: Text("abc@gmail.com"),
-           //    currentAccountPicture: Image.network("https://st2.depositphotos.com/4035913/6124/i/600/depositphotos_61243831-stock-photo-letter-s-logo.jpg"),
-           //    currentAccountPictureSize: Size.square(100),
-           //  ),
+           //DrawerHeader(child: Text("Main Menu")),
+            UserAccountsDrawerHeader(
+                accountName: Text("Ankita"),
+                accountEmail: Text("abc@gmail.com"),
+              currentAccountPicture: Image.network("https://st2.depositphotos.com/4035913/6124/i/600/depositphotos_61243831-stock-photo-letter-s-logo.jpg"),
+              currentAccountPictureSize: Size.square(100),
+            ),
 
             ListTile(title: Text("Home"),leading: Icon(Icons.home),
             onTap: (){
@@ -175,6 +177,11 @@ class SideDrawerHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+        appBar: AppBar(title: Text("Side Nav Bar"),
+          backgroundColor: Colors.lightGreenAccent[100],
+          centerTitle: true,),
+        drawer: OwnCreatedDrawer(),
         backgroundColor: Colors.white,
         body:
         Center(child: Text("Home Side Nav Bar", style: TextStyle(
@@ -197,17 +204,28 @@ class SideDrawerSearch extends StatelessWidget {
     );
   }
 }
-class SideDrawerUser extends StatelessWidget {
+class SideDrawerUser extends StatefulWidget {
 
+  @override
+  State<SideDrawerUser> createState() => _SideDrawerUserState();
+}
+
+class _SideDrawerUserState extends State<SideDrawerUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
+      appBar: AppBar(title: Text("Side Nav Bar"),
+        backgroundColor: Colors.lightGreenAccent[100],
+        centerTitle: true,),
         backgroundColor:Colors.white,
         body:
         Center(child: Text("Search Side Nav Bar", style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.lightGreen[600],
-        ),))
+        ),)),
+      drawer: OwnCreatedDrawer(),
     );
   }
 }
