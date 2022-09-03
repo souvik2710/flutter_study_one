@@ -1,4 +1,7 @@
 import 'package:demo_project/route%20and%20navigation/routes.dart';
+import 'package:demo_project/shadow_effect.dart';
+import 'package:demo_project/snackbar.dart';
+import 'package:demo_project/type_of_button.dart';
 import 'package:demo_project/user_interface_design1.dart';
 import 'package:demo_project/user_interface_design2.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +19,10 @@ import 'checkbox_one_selection_common_widget.dart';
 import 'expanded_example.dart';
 import 'fullcalculator.dart';
 import 'dartrelated.dart';
+import 'gradient_text.dart';
+import 'image_mask.dart';
 import 'listExample.dart';
+import 'listview_user_interface1.dart';
 import 'mainaxis_crosaxis_example.dart';
 import 'mapping_example.dart';
 import 'mcq_using_radio_button.dart';
@@ -87,7 +93,13 @@ class _MyAppState extends State<MyApp> {
       //OnceSelection()
       //AxisExample()
       //MappingExample()
-        BottomNav()
+       //BottomNav()
+        //ImageExample()
+        //UserInterface()
+        //CustomSnackBar()
+        ShadowEffect()
+        //GradientText()
+       // ButtonType()
     );
   }
 
