@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../bottom_navigation_bar.dart';
+//import '../bottom_navigation_bar.dart';
+import '../expansion_view_demo.dart';
+import '../side_nav_bar.dart';
+import '../ui2.dart';
+import '../ui3.dart';
 import 'navigation_four.dart';
 import 'navigation_main.dart';
 import 'navigation_one.dart';
@@ -14,6 +18,10 @@ class AppRoutes {
   static const sideDrawerHome="sideDrawerHomePage";
   static const sideDrawerUser="sideDrawerUserPage";
   static const sideDrawerSearch="sideDrawerSearchPage";
+  static const userDesign1="userDesignpage";
+  static const cartDesign="cartDesignpage";
+  static const expensionListView="expensionListViewPage";
+
 
 
 }
@@ -60,6 +68,24 @@ class AppRouter{
       case AppRoutes.sideDrawerSearch:
         return MaterialPageRoute<dynamic>(
           builder: (_) =>SideDrawerSearch(),
+          settings: settings,
+          fullscreenDialog: true,
+        );
+      case AppRoutes.userDesign1:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) =>BootomSheetDesign(),
+          settings: settings,
+          fullscreenDialog: true,
+        );
+      case AppRoutes.cartDesign:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) =>CartPage(),
+          settings: settings,
+          fullscreenDialog: true,
+        );
+      case AppRoutes.expensionListView:
+        return MaterialPageRoute<dynamic>(
+          builder: (_) =>ExpansionView(),
           settings: settings,
           fullscreenDialog: true,
         );
