@@ -1,18 +1,26 @@
 import 'package:demo_project/route%20and%20navigation/routes.dart';
 import 'package:demo_project/shadow_effect.dart';
+import 'package:demo_project/side_nav_bar.dart';
 import 'package:demo_project/snackbar.dart';
+import 'package:demo_project/splash_demo.dart';
+import 'package:demo_project/tab_bar.dart';
 import 'package:demo_project/type_of_button.dart';
+import 'package:demo_project/ui3.dart';
+
 import 'package:demo_project/user_interface_design1.dart';
 import 'package:demo_project/user_interface_design2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'ImageWithtext.dart';
+import 'api_basic_example/ui_user_basic_example.dart';
 import 'array_example.dart';
 import 'bottom_navigation_bar.dart';
+import 'button_design.dart';
+import 'expansion_view_demo.dart';
+import 'ui2.dart';
 import 'calculator.dart';
 import 'calwithseperatevalue.dart';
-
 import 'casecading_operators.dart';
 import 'checkbox_one_selection.dart';
 import 'checkbox_one_selection_common_widget.dart';
@@ -77,7 +85,7 @@ class _MyAppState extends State<MyApp> {
              ),
         onGenerateRoute: (settings) => AppRouter.onGenerateRoute(settings),
         home:
-       // PageMain()
+       //PageMain()
         //Calculator()
         //Fullcalculator()
         //HomePage()
@@ -93,13 +101,21 @@ class _MyAppState extends State<MyApp> {
       //OnceSelection()
       //AxisExample()
       //MappingExample()
-       //BottomNav()
+      // BottomNav()
+     // TabBarDesign()
+        //SideNavBar()
         //ImageExample()
         //UserInterface()
         //CustomSnackBar()
-        ShadowEffect()
+       // ShadowEffect()
+        //CartPage()
+        //BootomSheetDesign()
         //GradientText()
+       // ButtonDesign()
        // ButtonType()
+        //ApiUserBasicDesign()
+        SplashDesign()
+        //ExpansionView()
     );
   }
 
@@ -125,7 +141,9 @@ class _HomePageState extends State<HomePage> {
       mainAxisAlignment:MainAxisAlignment.spaceEvenly,
         children: [
         TextField(controller: textEditingController ,),
-       Row(mainAxisAlignment:MainAxisAlignment.spaceEvenly,children: [Text('$val'),Text('$abc'),Text('00')],),
+       Row(
+         mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+         children: [Text('$val'),Text('$abc'),Text('00')],),
        Row(mainAxisAlignment:MainAxisAlignment.spaceEvenly,children: [
         ElevatedButton(onPressed: (){
           setState(() {

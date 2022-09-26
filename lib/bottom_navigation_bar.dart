@@ -20,35 +20,6 @@ class _BottomNavState extends State<BottomNav> {
       centerTitle: true,),
       body:listBottomNavBar[ourSelectedIndex],
 
-      drawer: Drawer(
-        child: ListView(
-          children: [
-           //DrawerHeader(child: Text("Main Menu")),
-            UserAccountsDrawerHeader(
-                accountName: Text("Ankita"),
-                accountEmail: Text("abc@gmail.com"),
-              currentAccountPicture: Image.network("https://st2.depositphotos.com/4035913/6124/i/600/depositphotos_61243831-stock-photo-letter-s-logo.jpg"),
-              currentAccountPictureSize: Size.square(100),
-            ),
-
-            ListTile(title: Text("Home"),leading: Icon(Icons.home),
-            onTap: (){
-              Navigator.of(context).pushNamed(AppRoutes.sideDrawerHome);
-
-            },),
-            ListTile(title: Text("User"),leading: Icon(Icons.account_circle),
-            onTap: (){
-              Navigator.of(context).pushNamed(AppRoutes.sideDrawerUser);
-
-            },),
-            ListTile(title: Text("Search"),leading: Icon(Icons.search),
-              onTap: (){
-                Navigator.of(context).pushNamed(AppRoutes.sideDrawerSearch);
-
-              },),
-          ],
-        ),
-      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: ourSelectedIndex,
         onTap:(int i) {
@@ -89,33 +60,18 @@ class NavHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        backgroundColor: Colors.deepPurple[900],
-        appBar:AppBar(title:Text("Tab Bar View Design"),
-        bottom: TabBar(
-          tabs: [
-            Tab(icon: Icon(Icons.account_circle),),
-            Tab(icon: Icon(Icons.chat),),
-          ],
-        ),),
+     return Scaffold(
+        backgroundColor: Colors.yellow[500],
         body:
-          TabBarView(
-            children: [
-              TapBarOne(),TapBarTwo()
-            ],
-          )
-          // Center(child:Column(
-          //   children: [
-          //     Text(" Home Bottom Nav Bar",style: TextStyle(
-          //       color:Colors.orange,
-          //       fontWeight: FontWeight.bold,
-          //       fontSize: 18.0,
-          //     ),)
-          //   ],
-          // ))
-      ),
+        Center(child: Column(
+          children: [
+            Text(" Home Bottom Nav Bar", style: TextStyle(
+              color: Colors.pink,
+              fontWeight: FontWeight.bold,
+              fontSize: 18.0,
+            ),)
+          ],
+        ))
     );
   }
 }
@@ -129,7 +85,7 @@ class NavChat extends StatelessWidget {
         Center(child: Column(
           children: [
             Text(" Chat Bottom Nav Bar", style: TextStyle(
-              color: Colors.pink,
+              color: Colors.white,
               fontWeight: FontWeight.bold,
               fontSize: 18.0,
             ),)
@@ -143,12 +99,12 @@ class NavUser extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.lightGreen[700],
+        backgroundColor: Colors.blue[200],
         body:
         Center(child: Column(
           children: [
             Text("User Bottom Nav Bar", style: TextStyle(
-              color: Colors.white,
+              color: Colors.blue[700],
             ),)
           ],
         ))
@@ -165,95 +121,10 @@ class NavSearch extends StatelessWidget {
         Center(child: Column(
           children: [
             Text("Search Bottom Nav Bar", style: TextStyle(
-              color: Colors.amber,
+              color: Colors.amber[800],
             ),)
           ],
         ))
-    );
-  }
-}
-class SideDrawerHome extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-        appBar: AppBar(title: Text("Side Nav Bar"),
-          backgroundColor: Colors.lightGreenAccent[100],
-          centerTitle: true,),
-        drawer: OwnCreatedDrawer(),
-        backgroundColor: Colors.white,
-        body:
-        Center(child: Text("Home Side Nav Bar", style: TextStyle(
-          color: Colors.pinkAccent,
-        ),))
-    );
-  }
-}
-class SideDrawerSearch extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.white,
-        body:
-        Center(child: Text("Search Side Nav Bar", style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color:Colors.purple[900],
-        ),))
-    );
-  }
-}
-class SideDrawerUser extends StatefulWidget {
-
-  @override
-  State<SideDrawerUser> createState() => _SideDrawerUserState();
-}
-
-class _SideDrawerUserState extends State<SideDrawerUser> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-
-      appBar: AppBar(title: Text("Side Nav Bar"),
-        backgroundColor: Colors.lightGreenAccent[100],
-        centerTitle: true,),
-        backgroundColor:Colors.white,
-        body:
-        Center(child: Text("Search Side Nav Bar", style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.lightGreen[600],
-        ),)),
-      drawer: OwnCreatedDrawer(),
-    );
-  }
-}
-class TapBarOne extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor:Colors.white,
-        body:
-        Center(child: Text("tap Bar Page One", style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.lightGreen[600],
-        ),))
-    );
-  }
-}
-class TapBarTwo extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor:Colors.white,
-        body:
-        Center(child: Text("tap Bar Page Two", style: TextStyle(
-          fontWeight: FontWeight.bold,
-          color: Colors.amber[900],
-        ),))
     );
   }
 }
