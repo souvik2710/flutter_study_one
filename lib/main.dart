@@ -11,13 +11,18 @@ import 'package:demo_project/user_interface_design1.dart';
 import 'package:demo_project/user_interface_design2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'ImageWithtext.dart';
 import 'api_basic_example/ui_user_basic_example.dart';
+import 'api_riverpod_example/ui_basic_example.dart';
+import 'api_riverpod_example/ui_user_basic_example.dart';
 import 'array_example.dart';
 import 'bottom_navigation_bar.dart';
 import 'button_design.dart';
+import 'card_example.dart';
 import 'expansion_view_demo.dart';
+import 'hook_example/change_color.dart';
 import 'ui2.dart';
 import 'calculator.dart';
 import 'calwithseperatevalue.dart';
@@ -39,7 +44,7 @@ import 'notes.dart';
 import 'notes_using_common_widget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope (child: MyApp()));
 }
 
 class MyApp extends StatefulWidget {
@@ -114,7 +119,14 @@ class _MyAppState extends State<MyApp> {
        // ButtonDesign()
        // ButtonType()
         //ApiUserBasicDesign()
-        SplashDesign()
+        //SplashDesign()
+       // CardExample()
+       // ApiUIBasicDesign()
+        //UserInfo()
+       // TypeOne()
+        //TypeTwo()
+        //TypeThree()
+        TypeFour()
         //ExpansionView()
     );
   }
