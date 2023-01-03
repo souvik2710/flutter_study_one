@@ -294,7 +294,7 @@ class _BootomSheetDesignState extends State<BootomSheetDesign> {
                            color:Colors.grey[200],
                            thickness: 3,
                             //height: 5,
-                          ),
+                          ),//horizental line er kaj kore
                           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
