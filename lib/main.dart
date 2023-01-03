@@ -20,6 +20,7 @@ import 'api_riverpod_example/ui_user_basic_example.dart';
 import 'array_example.dart';
 import 'bottom_navigation_bar.dart';
 import 'button_design.dart';
+import 'calculator_using_hookconsumer.dart';
 import 'card_example.dart';
 import 'expansion_view_demo.dart';
 import 'hook_example/change_color.dart';
@@ -92,6 +93,7 @@ class _MyAppState extends State<MyApp> {
         home:
        //PageMain()
         //Calculator()
+        //CalculatorUsingHook()
         //Fullcalculator()
         //HomePage()
         //SecondPage()
@@ -119,14 +121,14 @@ class _MyAppState extends State<MyApp> {
        // ButtonDesign()
        // ButtonType()
         //ApiUserBasicDesign()
-        //SplashDesign()
+        SplashDesign()
        // CardExample()
        // ApiUIBasicDesign()
         //UserInfo()
        // TypeOne()
         //TypeTwo()
         //TypeThree()
-        TypeFour()
+        //TypeFour()
         //ExpansionView()
     );
   }
